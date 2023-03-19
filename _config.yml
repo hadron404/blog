@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Mr.zhou's Blog
+title: Hadron's Blog
 subtitle: ''
 description: ''
 keywords: software engineer
-author: zhou qiang
-language: zh-CN
+author: hadron
+language: en
 timezone: 'Asia/Shanghai'
 
 # URL
@@ -97,8 +97,14 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+#plugins:
+# 调色板
+#  - palette
+#  - position: sidebar
+#    template: |
+#      <is-palette palette="#673ab7,#3f51b5,#2196f3,#009688,#4caf50,#ff9800,#ff5722,#795548" col="4"></is-palette>
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: inside
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

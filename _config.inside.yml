@@ -1,0 +1,117 @@
+appearance:
+  # Accent color, default '#2a2b33'
+  accent_color:
+  # Font color, default '#363636'
+  foreground_color:
+  # Border color, default '#e0e0e0'
+  border_color:
+  # body background, default '#f5f7fa'
+  background:
+  # Sidebar background (when opened), default to accent_color
+  sidebar_background:
+  # Card background, default '#fff'
+  card_background:
+
+  # All background settings above support image, e.g.,
+  # '//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png #f5f7fa' or
+  # 'url(//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png) #f5f7fa'
+
+  # 内容区域最大宽度
+  content_width: 720
+
+  # 字体设置
+  font:
+    # 字体 CSS 文件的 URL
+    url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
+
+    # 基础字体，作用于 body 元素
+    base: "'Josefin Sans', 'PingFang SC', Microsoft YaHei"
+    # 作用于 sidebar 上方的 LOGO
+    logo:
+    # 作用于 sidebar 菜单栏
+    menu: 'Baloo Bhaijaan'
+    # 作用于文章百分比、归档页月份、分类文字数、分页、目录索引等地方
+    label: Montserrat
+    # 作用于标题
+    heading:
+    # 作用于代码及代码块
+    code: Inconsolata, monospace
+    # Base font for printing which applied to body
+    print:
+
+  # 代码语法高亮
+  # 接受设置值为 16 个 hex 色值的数组，具体请参考 base16 (https://github.com/chriskempson/base16)
+  # 默认配色方案为 Atelier Dune Light
+  highlight: [
+    '#ffffff', '#e0e0e0', '#d6d6d6', '#8e908c',
+    '#969896', '#4d4d4c', '#282a2e', '#1d1f21',
+    '#c82829', '#f5871f', '#eab700', '#718c00',
+    '#3e999f', '#4271ae', '#8959a8', '#a3685a'
+  ]
+
+  # 启用 darkmode
+  darkmode:
+    accent_color: '#539bf5'
+    foreground_color: '#adbac7'
+    border_color: '#373e47'
+    background: '#22272e'
+    sidebar_background: '#22272e'
+    card_background: '#2d333b'
+    highlight: [
+      '#2d333b', '#444c56', '#3e4451', '#545862',
+      '#565c64', '#abb2bf', '#b6bdca', '#c8ccd4',
+      '#e06c75', '#d19a66', '#e5c07b', '#98c379',
+      '#56b6c2', '#61afef', '#c678dd', '#be5046'
+    ]
+# Sidebar profile
+profile:
+  # 邮箱用于生成 gravatar 头像，如配置了 `hexo.config.email`，此项可缺省
+  email: im.mr.zhou.cn@gmail.com
+
+  # 也可以直接设置头像 URL
+  avatar: https://avatars.githubusercontent.com/u/50367500?s=400&u=3bbe805e996593b15ff9a33cafd6a492f5f77948&v=4
+
+  # 个性签名
+  bio: 周而不比 和而不同 矜而不争 群而不党
+
+menu:
+  🏠  Home: /
+#  关于: /about
+#  搜索: /search
+#  🔭  Github: https://github.com/hadron404
+
+sns:
+  email: im.mr.zhou.cn@gmail.com
+  github: https://github.com/hadron404
+  telegram: https://t.me/hadron42
+  youtube: https://www.youtube.com/@hadron42
+
+footer:
+  # 默认显示 @2019 • author，设置为 false 可隐藏。
+#  copyright: '&copy; 2019 ❤️ <a href="">John Doe</a>'
+  # `由 Hexo 强力驱动` 字样，默认显示，设置为 false 可隐藏。
+#  powered: false
+  # `主题 - Inside` 字样，默认显示，设置为 false 可隐藏。
+#  theme: false
+  # 于最后一行添加自定义内容
+#  custom: Hosted by <a target="_blank" href="">Github Pages</a>
+#custom: <span id="busuanzi_container_site_uv" style='display:none'>Total <span id="busuanzi_value_site_uv"></span> visitors. </span><span id="busuanzi_container_site_pv" style='display:none'><span id="busuanzi_value_site_pv"></span> Views</span>
+
+# 打赏设置
+reward:
+  # 显示一句文案
+  text: 💖 Good Good Study, Day Day Up! 💖.
+
+copyright:
+  # 显示作者，设置为 false 可隐藏。
+  author: false
+  # 显示文章链接，设置为 false 可隐藏。
+  link: false
+  # 版权声明
+  license: Attribution-NonCommercial-NoDerivatives 4.0 International<br>(<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noopener" target="_blank">CC BY-NC-ND 4.0</a>)
+  # 显示发表日期，默认不显示，设置为 true 可显示。
+  published: true
+  # 显示修改日期，默认不显示，设置为 true 可显示。
+  updated: true
+  # 禁用以上设置，显示自定义信息
+#  custom: 不许转载😡！！！
