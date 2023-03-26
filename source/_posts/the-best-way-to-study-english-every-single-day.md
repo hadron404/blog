@@ -9,6 +9,8 @@ tags:
 - IELTS
 ---
 
+![The best way to study English every single day.png](https://s2.loli.net/2023/03/26/YKJjhWSaH8qixo2.png)
+
 ## Step 1:  VOCABULARY [5 MINUTES]
 
 * **Breakdown:** Pick a vocabulary word that describes how you felt in the morning.
