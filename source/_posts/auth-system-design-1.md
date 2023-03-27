@@ -1,12 +1,13 @@
 ---
-title: 认证中心系统设计 一、认识 OAuth
-date: 2023-03-25 20:21:09
+title: 认证授权系统设计【一】相关概念或术语
+date: 2023-03-26 21:21:09
 categories:
 - system-design
-tags:
-- oauth
+  tags:
+- Authentication & Authorization
 ---
 
+# OAuth
 
 ## 什么是 OAuth
 > OAuth 是一个关于授权的开放网络标准，

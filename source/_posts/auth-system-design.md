@@ -1,10 +1,10 @@
 ---
-title: 认证中心系统设计 二、 认证、授权、鉴权和权限控制
+title: 认证授权系统设计【零】认证、授权、鉴权和权限控制
 date: 2023-03-25 20:37:01
 categories:
 - system-design
 tags:
-- oauth
+- Authentication & Authorization
 ---
 
 ## 认证
