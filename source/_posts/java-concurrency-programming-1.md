@@ -66,6 +66,40 @@ Java doc 注释
 ### Executors class
 Java 封装了一系列常用的线程池方法。
 
+> newFixedThreadPool(): 创建一个固定大小的线程池  
+> newSingleThreadExecutor()：创建一个单线程化线程池
+> newCachedThreadPool()：创建一个可缓存线程池
+> newScheduledThreadPool()：创建一个支持定时与周期性任务的线程池
+> newWorkStealingPool()：创建一个支持工作窃取的线程池
+
+#### FixedThreadPool：定长线程池
+
+[Java doc](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html)
+> Creates a thread pool that reuses a fixed number of threads operating off a shared unbounded queue.
+
+
+#### SingleThreadExecutor：单线程化线程池
+[Java doc](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html)
+> Creates an Executor that uses a single worker thread operating off an unbounded queue.
+> (Note however that if this single thread terminates due to a failure during execution prior to shut-down, 
+> a new one will take its place if needed to execute subsequent tasks.)
+
+#### CachedThreadPool：可缓存线程池
+[Java doc](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html)
+> Creates a thread pool that creates new threads as needed, 
+> but will reuse previously constructed threads when they are available.
+
+
+#### ScheduledThreadPool：支持定时及周期性任务执行的定长线程池
+[Java doc](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html)
+> Creates a thread pool that can schedule commands to run after a given delay, or to execute periodically.
+
+
+#### WorkStealingPool： ForkJoinPool ，基于 work-stealing 算法，支持工作窃取
+[Java doc](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html)
+> Creates a work-stealing thread pool using the number of available processors as its target parallelism level.
+
+
 ## CompletableFuture class
 
 ## Atomic
