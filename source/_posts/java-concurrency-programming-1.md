@@ -66,7 +66,7 @@ Java doc 注释
 ### Executors class
 Java 封装了一系列常用的线程池方法。
 
-> newFixedThreadPool(): 创建一个固定大小的线程池  
+> newFixedThreadPool(int nThreads): 创建一个固定大小的线程池  
 > newSingleThreadExecutor()：创建一个单线程化线程池
 > newCachedThreadPool()：创建一个可缓存线程池
 > newScheduledThreadPool()：创建一个支持定时与周期性任务的线程池
@@ -77,6 +77,10 @@ Java 封装了一系列常用的线程池方法。
 [Java doc](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html)
 > Creates a thread pool that reuses a fixed number of threads operating off a shared unbounded queue.
 
+定长线程池可控制线程最大并发数，超出的线程会在队列中等待。
+
+Warning
+> Executors.newFixedThreadPool 方法的工作队列的长度是 `Integer.MAX_VALUE`，可能会造成 OOM 问题。
 
 #### SingleThreadExecutor：单线程化线程池
 [Java doc](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html)
@@ -84,21 +88,30 @@ Java 封装了一系列常用的线程池方法。
 > (Note however that if this single thread terminates due to a failure during execution prior to shut-down, 
 > a new one will take its place if needed to execute subsequent tasks.)
 
+单线程化线程池只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。
+工作队列同样是设置 `Integer.MAX_VALUE`，可能会造成 OOM 问题。
+
 #### CachedThreadPool：可缓存线程池
 [Java doc](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html)
 > Creates a thread pool that creates new threads as needed, 
 > but will reuse previously constructed threads when they are available.
+
+可缓存线程池会将之前创建的线程在可用时重用它们，从而完成缓存线程。
+其允许的创建线程数量为 Integer.MAX_VALUE，可能会创建大量的线程，从而导致 OOM 。
 
 
 #### ScheduledThreadPool：支持定时及周期性任务执行的定长线程池
 [Java doc](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html)
 > Creates a thread pool that can schedule commands to run after a given delay, or to execute periodically.
 
+创建一个定长线程池，支持定时及周期性任务执行。可以作为延时任务的解决方案之一，比 Timer 要更安全，功能更强大。
 
 #### WorkStealingPool： ForkJoinPool ，基于 work-stealing 算法，支持工作窃取
 [Java doc](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html)
 > Creates a work-stealing thread pool using the number of available processors as its target parallelism level.
 
+顾名思义，它是基于 work-stealing 算法的，其中一个任务可以产生其他较小的任务，这些任务被添加到并行处理线程的队列中。
+如果一个线程完成了工作并且无事可做，则可以从另一线程的队列中"窃取"工作。
 
 ## CompletableFuture class
 
